@@ -4,7 +4,7 @@ import { hash, compare } from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import bodyParser from 'body-parser';
 import cors from "cors";
-import { Plan } from './extras/plans.js';
+// import { Plan } from './extras/plans.js';
 
 const app = express();
 const port = 5000;
@@ -77,11 +77,11 @@ app.post('/login', async (req, res) => {
     }
 });
 
-app.get('/plans', async (req, res) => {
-    const plans = Plan.find();
-    console.log(plans)
-    res.json(plans)
-});
+// app.get('/plans', async (req, res) => {
+//     const plans = Plan.find();
+//     console.log(plans)
+//     res.json(plans)
+// });
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
